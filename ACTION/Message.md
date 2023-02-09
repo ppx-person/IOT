@@ -96,5 +96,4 @@ But if a client has a fixed ClientID, and it connects to the broker with clean_s
 the broker will store particular messages for it when it is off-line. 
 If the Pub/Sub is done at certain QoS level (broker configuration), 
 these messages will be delivered when this client is reconnected.
-
 Off-line messages are useful when the connection is not stable, or the application has special requirements on QoS.
