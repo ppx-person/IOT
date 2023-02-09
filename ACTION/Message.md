@@ -64,13 +64,37 @@ payload:  A will message from MQTTX CLI
 
 https://blog.csdn.net/zhetmdoubeizhanyong/article/details/104871483
 
+假设 4 个订阅者订阅了同一个主题，都会收到,
+现在假如只想每条消息有一个订阅者处理即可，那么使用共享订阅就可以了
+
+* 共享订阅针对场景应是数据的生产者远超出数据消费者数量
+共享订阅针对场景应是数据的生产者远超出数据消费者数量，而且同一条数据(消息)只需要被任意其中一个消费者处理一次。
+主要是实现消费者数量处理消息的均衡负载。
+
+两种方式
+主题前缀$queue/:topic, 实例sub $queue/up/data
+主题前缀$share/:group/:topic 实例sub $share/group/up/data
+
+共享订阅由三部分组成：
+* 静态共享标识符 （$queue 与 $share）
+* 组标识符（可选）
+* 实际接收消息的主题
+
+$queue 之后的主题中所有消息将轮流发送到客户端
+$share 之后，您可以添加不同的组，例如:
+* $share/group_1/topic
+* $share/group_2/topic
+* $share/group_3/topic
+当broker 向 topic 发送消息时，每个组都会收到该消息，并将该消息随机发送给本组中的一个设备
 
 
 
+#### What is off-line message?
+Usually an MQTT client receives messages only when it is connected to an EMQX broker, 
+and it will not receive messages if it is off-line. 
+But if a client has a fixed ClientID, and it connects to the broker with clean_session = false, 
+the broker will store particular messages for it when it is off-line. 
+If the Pub/Sub is done at certain QoS level (broker configuration), 
+these messages will be delivered when this client is reconnected.
 
-
-
-
-
-
-
+Off-line messages are useful when the connection is not stable, or the application has special requirements on QoS.
