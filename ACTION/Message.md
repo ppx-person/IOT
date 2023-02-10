@@ -97,3 +97,19 @@ the broker will store particular messages for it when it is off-line.
 If the Pub/Sub is done at certain QoS level (broker configuration), 
 these messages will be delivered when this client is reconnected.
 Off-line messages are useful when the connection is not stable, or the application has special requirements on QoS.
+
+#### My connections number is small, do I still need to deploy multiple nodes in production?
+Even when the connection number is low, or message rate is low, 
+it still makes sense to deploy a cluster with multiple nodes in production. 
+Clustering improves the availability of system: when a single node goes down, 
+the rest of the nodes in the cluster ensure that the service is not interrupted.
+
+
+https://www.emqx.io/docs/en/v5.0/mqtt/mqtt-system-topics.html#cluster-status-information
+
+```
+mqttx sub -t '$SYS/brokers/emqx@127.0.0.1/version' -h 'localhost' -p 1883 -v
+
+mqttx sub -t '$SYS/brokers/emqx@127.0.0.1/clients/mqttx_f9eb851e/connected' -h 'localhost' -p 1883 -v
+
+```
