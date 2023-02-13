@@ -6,6 +6,5 @@ https://blog.csdn.net/weixin_46822367/article/details/120196198 v3
 
 https://docs.gitcode.net/spring/guide/spring-integration/mqtt.html
 
-
-
-
+可行的
+https://blog.csdn.net/leveretz/article/details/125816695
