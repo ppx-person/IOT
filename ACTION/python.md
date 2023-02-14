@@ -8,4 +8,9 @@
 # https://wokwi.com/projects/342366199858856532
 
 
+# micro python
+http://micropython.org/unicorn/
+http://docs.micropython.org/en/latest/
+
+
 
