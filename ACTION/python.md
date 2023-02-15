@@ -14,3 +14,18 @@ http://docs.micropython.org/en/latest/
 
 
 
+
+# mqtt
+https://bpi-steam.com/WebBit_doc/zh/micropython/modules/umqtt.simple.html
+https://github.com/micropython/micropython-lib/tree/master/umqtt.simple
+
+
+发布和订阅都支持QoS 0和1。
+不支持QoS2以保持较小的代码大小。
+除ClientID外，目前只支持“clean session”参数进行连接。
+
+用UUID
+https://www.famkruithof.net/uuid/uuidgen
+Extract the time from a version 1UUID / GUID
+
+
