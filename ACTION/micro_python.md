@@ -30,3 +30,15 @@ $(".navbar-brand").html("");
 # mqtt模块umqtt.simple
 https://bpi-steam.com/WebBit_doc/zh/micropython/modules/umqtt.simple.html
 https://github.com/micropython/micropython-lib/tree/master/umqtt.simple
+
+
+# time
+```
+import time
+print(time.ticks_ms())
+time.sleep_ms(1000)
+print(time.ticks_ms())
+print(time.ticks_us())
+time.sleep_us(1000000)
+```
+
