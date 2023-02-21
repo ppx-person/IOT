@@ -16,8 +16,10 @@ http://docs.micropython.org/en/latest/
 
 
 在线运行mycro python
-http://micropython.org/unicorn/
-
+http://micropython.org/unicorn/  
+$("#PYB").css("visibility", "hidden");
+$("title").text("python")
+$(".navbar-brand").html("")
 
 # wokwi 在线防真
 * https://docs.wokwi.com/zh-CN/guides/micropython#%E9%A1%B9%E7%9B%AE%E4%BE%8B%E5%AD%90
