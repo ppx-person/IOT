@@ -42,3 +42,7 @@ print(time.ticks_us())
 time.sleep_us(1000000)
 ```
 
+https://blog.csdn.net/zhusongziye/article/details/126673727
+
+
+
