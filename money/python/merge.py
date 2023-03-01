@@ -23,7 +23,7 @@ def merge(img_array, direction="horizontal", gap=0):
 if __name__ == '__main__':
     img_list = []
     for i in range(0, 10):
-        img = cv2.imread("D:\\tmp\\0.png")
+        img = cv2.imread("D:\\tmp\\1.jpg")
         img_list.append(img)
     img = merge(img_list, "vertical")
     cv2.imwrite("D:\\tmp\\out.png", img)
