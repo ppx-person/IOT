@@ -49,8 +49,9 @@ if __name__ == '__main__':
     
     
     matrix = [
-    [0, 1, 0, 1],
-    [1, 1, 1, 0]
+    [0, 1, 0],
+    [1, 1, 0],
+    [1, 1, 1]
     ]
     out_img = draw(matrix, white_img, black_img)
     cv2.imwrite("D:\\tmp\\out.png", out_img)
