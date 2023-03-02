@@ -22,8 +22,12 @@ def merge(img_array, direction="horizontal", gap=0):
 
 if __name__ == '__main__':
     img_list = []
+    w_img = cv2.imread("D:\\tmp\\w.jpg")
+    b_img = cv2.imread("D:\\tmp\\b.jpg")
     for i in range(0, 10):
-        img = cv2.imread("D:\\tmp\\1.jpg")
-        img_list.append(img)
+        if i % 2 == 0:
+            img_list.append(w_img)
+        else:
+            img_list.append(b_img)
     img = merge(img_list, "vertical")
     cv2.imwrite("D:\\tmp\\out.png", img)
