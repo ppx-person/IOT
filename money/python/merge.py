@@ -21,6 +21,17 @@ def merge(img_array, direction="horizontal", gap=0):
 
 
 if __name__ == '__main__':
+    
+    array = [
+    [0, 1, 0],
+    [1, 0, 1]
+    ]
+    
+    print(array)    
+    exit()
+    
+    
+    
     img_list = []
     w_img = cv2.imread("D:\\tmp\\w.jpg")
     b_img = cv2.imread("D:\\tmp\\b.jpg")
