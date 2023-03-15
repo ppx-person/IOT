@@ -6,8 +6,9 @@ import numpy as np
 
 def create_init_code(data):
     # version 最小版本
-    qr = qrcode.QRCode(version=1, error_correction=qrcode.constants.ERROR_CORRECT_L, box_size=1, border=0)
+    qr = qrcode.QRCode(version=7, error_correction=qrcode.constants.ERROR_CORRECT_L, box_size=1, border=0)
     qr.add_data(data)
+    # 当fit参数为真或者没有给出version参数时，调用best_fit方法来找到适合数据的最小尺寸
     qr.make(fit=True)
     img = qr.make_image()
     return img
