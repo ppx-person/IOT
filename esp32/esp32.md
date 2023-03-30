@@ -16,3 +16,10 @@ p0 = Pin(2, Pin.IN)
 p0.irq(trigger=Pin.IRQ_FALLING, handler=callback)
 p2.irq(trigger=Pin.IRQ_RISING | Pin.IRQ_FALLING, hander=callack)
 ```
+
+PULL_UP输入上拉 PULL_DOWN输入下拉，上拉默认高电平，下拉默认低电平
+
+上拉下拉是对于输入而言的，作用是当外部输入电平不确定的时候给定一个确定的电平。
+
+
+

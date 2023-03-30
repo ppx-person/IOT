@@ -96,6 +96,15 @@ Install/launch the plugin
 ```
 
 
+while 1:
+	#micropython.mem_info()
+	c.wait_msg()
+finally:
+	c.disconnect()复制代码
 
+def sub_cb(topic, msg):
 
+c = MQTTClient(CLIENT_ID, server,6002,username,password)
+# Subscribed messages will be delivered to this callback
+c.set_callback(sub_cb)
 
